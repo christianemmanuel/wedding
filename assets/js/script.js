@@ -87,3 +87,5 @@ var x = setInterval(function() {
     document.querySelector('.countdow-days').remove();
   }
 }, 1000);
+
+
