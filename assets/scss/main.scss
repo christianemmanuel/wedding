@@ -11,6 +11,7 @@ body {
   font-size: 1rem;
   scroll-behavior: smooth;
   color: $color-white;
+  overflow-x: hidden;
 }
 h1, h2 {
   font-family: $font-lora;
@@ -49,6 +50,7 @@ p {
 #app {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 100vh;
   position: relative;
 }
@@ -106,7 +108,7 @@ section {
     background-color: #B99470;
   }
 }
-#question-and-answer { 
+#question-and-answer, #countdown { 
   background-color: #F2E9DD; 
   color: #7C6E67;
   .badge {
@@ -258,11 +260,15 @@ nav {
     z-index: -1;
   }
 }
-
+img {
+  display: block;
+  max-width: 100%;
+}
 .container {
   max-width: 1040px;
   width: 100%;
   height: 100%;
+  position: relative;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -317,16 +323,61 @@ nav {
       width: 100%;
     }
   }
+  &.btn-white {
+    min-width: 175px;
+    box-shadow: rgba(0, 0, 0, 20%) 2px 5px 18px -1px, rgba(0, 0, 0, 15%) 2px 2px 10px -3px;
+    color: #333333;
+    height: 47px;
+    font-size: 17px;
+    font-family: Arial;
+    font-weight: 600;
+    background-color: #f5f5f5;
+    overflow: inherit;
+    &:before {
+      display: none;
+    }
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-white;
+      z-index: -1;
+      border-radius: 50px;
+      height: 111%;
+      width: 104%;
+      border: 1px solid #d2d2d2;
+      opacity: 0;
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
 }
 .wedding-details {
   text-align: center;
   position: relative;
   display: block;
+  #countdownDays {
+    line-height: 1em;
+    color: $color-brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 82px;
+  }
 }
 .wedding-cta {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  padding-top: 1rem;
+  align-items: center;
 }
 .color-palette {
   display: flex;
@@ -342,7 +393,111 @@ nav {
     display: block;
     @include transition(all ease-in-out 180ms);
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
+  }
+}
+.foating-flower {
+  position: absolute;
+  z-index: 1;
+}
+.flower-left,
+.flower-right {
+  opacity: 0;
+  @include transition(all cubic-bezier(0.55, 0.09, 0.68, 0.53) 300ms);
+  transition-delay: 180ms;
+}
+.flower-left {
+  bottom: 50px;
+  left: 0;
+  transform: translateX(-45px);
+  &.is-visible {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.flower-right {
+  top: 50px;
+  right: 0;
+  transform: translateX(45px);
+  &.is-visible {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+#intro,
+#venue {
+  .flower-left {
+    left: -34px;
+  }
+  .flower-right {
+    right: -53px;
+  }
+}
+#wedding-day {
+  .flower-left {
+    left: -74px;
+  }
+  .flower-right {
+    right: -73px;
+  }
+}
+#join-us {
+  .flower-left {
+    left: -58px;
+  }
+  .flower-right {
+    right: -68px;
+  }
+}
+#what-to-wear {
+  .flower-left {
+    left: -78px;
+  }
+  .flower-right {
+    right: -128px;
+  }
+}
+#gift {
+  .flower-left {
+    left: -98px;
+  }
+  .flower-right {
+    right: -34px;
+  }
+}
+#question-and-answer {
+  .container-radius {
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+    padding-bottom: 265px;
+    padding-top: 265px;
+  }
+  .flower-left {
+    bottom: 0;
+  }
+  .flower-right {
+    right: -77px;
+  }
+}
+#countdown {
+  .container-transparent {
+    background-color: transparent;
+  }
+  span {
+    font-family: $font-lora;
+    color: $color-brown;
+    font-size: 2rem;
+    margin-top: .5rem;
+    display: block;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  @include transition(all cubic-bezier(0.55, 0.09, 0.68, 0.53) 300ms);
+  transition-delay: 180ms;
+  &.is-visible {
+    opacity: 1;
   }
 }
