@@ -20,7 +20,6 @@ autoHeight();
 // Window Resize
 window.addEventListener('resize', function() {
   autoHeight;
-  location.reload();
 }, true);
 
 // Scoll animation
