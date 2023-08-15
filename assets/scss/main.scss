@@ -53,7 +53,7 @@ p {
   width: 100%;
   height: 100%;
 }
-section {
+.section {
   position: relative;
   display: flex;
   align-items: center;
@@ -62,52 +62,43 @@ section {
   scroll-snap-align: start;
   flex-direction: column;
 }
-#header { 
-  background-color: #F2E9DD; 
-  z-index: 1; 
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  min-height: 100vh;
-}
-#intro { 
+#_introduction { 
   background-color: #9E4831;
   .badge {
     background-color: #9E4831;
   }
 }
-#wedding-day { 
+#_wedding-day { 
   background-color: #B99470; 
   .badge {
     background-color: #B99470;
   }
 }
-#venue { 
+#_venue { 
   background-color: #69735A; 
   .badge {
     background-color: #69735A;
   }
 }
-#join-us { 
+#_join-us { 
   background-color: #B97049; 
   .badge {
     background-color: #B97049;
   }
 }
-#what-to-wear { 
+#_what-to-wear { 
   background-color: #BAB0A7; 
   .badge {
     background-color: #BAB0A7;
   }
 }
-#gift { 
+#_gift { 
   background-color: #B99470; 
   .badge {
     background-color: #B99470;
   }
 }
-#question-and-answer, #countdown { 
+#_faq, #_countdown { 
   background-color: #F2E9DD; 
   color: #7C6E67;
   .badge {
@@ -117,6 +108,13 @@ section {
   .btn {
     border-color: #7C6E67;
     color: #7C6E67;
+  }
+}
+#_countdown {
+  .btn {
+    border-color: #7c311e;
+    color: #ffffff;
+    background-color: #96442F;
   }
 }
 * {
@@ -194,7 +192,14 @@ nav {
 }
 
 
-.header {
+#_hero {
+  background-color: #F2E9DD; 
+  z-index: 1; 
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
   &::before {
     position: absolute;
     display: block;
@@ -425,8 +430,8 @@ img {
     opacity: 1;
   }
 }
-#intro,
-#venue {
+#_introduction,
+#_venue {
   .flower-left {
     left: -34px;
   }
@@ -434,7 +439,7 @@ img {
     right: -53px;
   }
 }
-#wedding-day {
+#_wedding-day {
   .flower-left {
     left: -74px;
   }
@@ -442,7 +447,7 @@ img {
     right: -73px;
   }
 }
-#join-us {
+#_join-us {
   .flower-left {
     left: -58px;
   }
@@ -450,7 +455,7 @@ img {
     right: -68px;
   }
 }
-#what-to-wear {
+#_what-to-wear {
   .flower-left {
     left: -78px;
   }
@@ -458,7 +463,7 @@ img {
     right: -128px;
   }
 }
-#gift {
+#_gift {
   .flower-left {
     left: -98px;
   }
@@ -466,7 +471,7 @@ img {
     right: -34px;
   }
 }
-#question-and-answer {
+#_faq {
   .container-radius {
     border-bottom-left-radius: 500px;
     border-bottom-right-radius: 500px;
@@ -480,7 +485,7 @@ img {
     right: -77px;
   }
 }
-#countdown {
+#_countdown {
   .container-transparent {
     background-color: transparent;
   }
@@ -501,24 +506,254 @@ img {
     opacity: 1;
   }
 }
-#all-pages{
-  position:relative;
-  top:0;
-  transition:all 800ms ease;
-  /* height set by js */
-}
 
-#app {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
 
-#all-pages{
+
+
+
+
+
+
+/**
+ * fullPage Pure Javascript v.0.0.9 (Alpha) - Not support given until Beta version.
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+ html.fp-enabled,
+ .fp-enabled body {
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   /*Avoid flicker on slides transitions for mobile phones #336 */
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+ }
+ 
+ #superContainer {
+   height: 100%;
+   position: relative;
+   /* Touch detection for Windows 8 */
+   -ms-touch-action: none;
+   /* IE 11 on Windows Phone 8.1*/
+   touch-action: none;
+ }
+ 
+ .fp-section {
+   position: relative;
+   -webkit-box-sizing: border-box;
+   /* Safari<=5 Android<=3 */
+   -moz-box-sizing: border-box;
+   /* <=28 */
+   box-sizing: border-box;
+   height: 100%;
+ }
+ 
+ .fp-slide {
+   float: left;
+ }
+ 
+ .fp-slide, .fp-slidesContainer {
+   height: 100%;
+   display: block;
+ }
+ 
+ .fp-slides {
+   z-index: 1;
+   height: 100%;
+   overflow: hidden;
+   position: relative;
+   -webkit-transition: all 0.3s ease-out;
+   /* Safari<=6 Android<=4.3 */
+   transition: all 0.3s ease-out;
+ }
+ 
+ .fp-section.fp-table, .fp-slide.fp-table {
+   display: table;
+   table-layout: fixed;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .fp-tableCell {
+   display: table-cell;
+   vertical-align: middle;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .fp-slidesContainer {
+   float: left;
+   position: relative;
+ }
+ 
+ .fp-controlArrow {
+   position: absolute;
+   z-index: 4;
+   top: 50%;
+   cursor: pointer;
+   width: 0;
+   height: 0;
+   border-style: solid;
+   margin-top: -38px;
+ }
+ 
+ .fp-controlArrow.fp-prev {
+   left: 15px;
+   width: 0;
+   border-width: 38.5px 34px 38.5px 0;
+   border-color: transparent #fff transparent transparent;
+ }
+ 
+ .fp-controlArrow.fp-next {
+   right: 15px;
+   border-width: 38.5px 0 38.5px 34px;
+   border-color: transparent transparent transparent #fff;
+ }
+ 
+ .fp-scrollable {
+   overflow: scroll;
+ }
+ 
+ .fp-notransition {
+   -webkit-transition: none !important;
+   transition: none !important;
+ }
+ 
+ #fp-nav {
+   position: fixed;
+   z-index: 100;
+   margin-top: -32px;
+   top: 50%;
+   opacity: 1;
+ }
+ 
+ #fp-nav.right {
+   right: 17px;
+ }
+ 
+ #fp-nav.left {
+   left: 17px;
+ }
+ 
+ .fp-slidesNav {
+   position: absolute;
+   z-index: 4;
+   left: 50%;
+   opacity: 1;
+ }
+ 
+ .fp-slidesNav.bottom {
+   bottom: 17px;
+ }
+ 
+ .fp-slidesNav.top {
+   top: 17px;
+ }
+ 
+ #fp-nav ul,
+ .fp-slidesNav ul {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ #fp-nav ul li,
+ .fp-slidesNav ul li {
+   display: block;
+   width: 14px;
+   height: 13px;
+   margin: 7px;
+   position: relative;
+ }
+ 
+ .fp-slidesNav ul li {
+   display: inline-block;
+ }
+ 
+ #fp-nav ul li a,
+ .fp-slidesNav ul li a {
+   display: block;
+   position: relative;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
+   text-decoration: none;
+ }
+ 
+ #fp-nav ul li a.active span,
+ .fp-slidesNav ul li a.active span,
+ #fp-nav ul li:hover a.active span,
+ .fp-slidesNav ul li:hover a.active span {
+   height: 12px;
+   width: 12px;
+   margin: -6px 0 0 -6px;
+   border-radius: 100%;
+ }
+ 
+ #fp-nav ul li a span,
+ .fp-slidesNav ul li a span {
+   border-radius: 50%;
+   position: absolute;
+   z-index: 1;
+   height: 4px;
+   width: 4px;
+   border: 0;
+   background: #333;
+   left: 50%;
+   top: 50%;
+   margin: -2px 0 0 -2px;
+   -webkit-transition: all 0.1s ease-in-out;
+   -moz-transition: all 0.1s ease-in-out;
+   -o-transition: all 0.1s ease-in-out;
+   transition: all 0.1s ease-in-out;
+ }
+ 
+ #fp-nav ul li .fp-tooltip {
+   position: absolute;
+   top: -2px;
+   color: #fff;
+   font-size: 14px;
+   font-family: arial, helvetica, sans-serif;
+   white-space: nowrap;
+   max-width: 220px;
+   overflow: hidden;
+   display: block;
+   opacity: 0;
+   width: 0;
+ }
+ 
+ #fp-nav ul li:hover .fp-tooltip,
+ #fp-nav.fp-show-active a.active + .fp-tooltip {
+   -webkit-transition: opacity 0.2s ease-in;
+   transition: opacity 0.2s ease-in;
+   width: auto;
+   opacity: 1;
+ }
+ 
+ #fp-nav ul li .fp-tooltip.right {
+   right: 20px;
+ }
+ 
+ #fp-nav ul li .fp-tooltip.left {
+   left: 20px;
+ }
+#_countdown {
+  background-image: url('../images/prenup_1.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
-  @include transition(all ease-in-out 600ms);
-}
-.scroll-section {
-  height:100%;
-  width:100%;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(249,220,183);
+    background: linear-gradient(4deg, rgba(249,220,183,0.8071603641456583) 0%, rgba(242,233,221,0.8) 100%);
+    z-index: -1;
+  }
 }

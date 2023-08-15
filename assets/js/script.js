@@ -20,6 +20,7 @@ autoHeight();
 // Window Resize
 window.addEventListener('resize', function() {
   autoHeight;
+  location.reload();
 }, true);
 
 // Scoll animation
@@ -89,3 +90,8 @@ var x = setInterval(function() {
 }, 1000);
 
 
+fullpage.initialize('#all-pages', {
+	menu: '#menu',
+	anchors:['hero', 'introduction', 'wedding-day', 'venue', 'rsvp', 'what-to-wear', 'gift', 'faq', 'countdown'],
+	css3: true,
+});
