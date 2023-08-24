@@ -122,10 +122,12 @@
   .flower-right {
     transform: scale(0.7) !important;
     transform-origin: right !important;
+    display: none !important;
   }
   .flower-left {
     transform: scale(0.7) !important;
     transform-origin: left !important;
+    display: none !important;
   }
   .active {
     .flower-right {
