@@ -209,4 +209,18 @@
   .flower-right {
     transform: scale(0.6) !important;
   }
+  .active {
+    .flower-right {
+      right: 0 !important;
+      opacity: 0.4 !important;
+    } 
+    .flower-left {
+      left: 0 !important;
+      opacity: 0.4 !important;
+    } 
+  }
+  .wedding-details .countdown p {
+    font-size: 36px;
+    margin: .75rem 0;
+  }
 }
