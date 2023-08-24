@@ -13,21 +13,39 @@
 
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/mobile.css">
 </head>
 <body>
 
+  <ul id="menu">
+    <li data-menuanchor="hero" class="active"><a href="#_hero">First section</a></li>
+    <li data-menuanchor="introduction"><a href="#_introduction">Second section</a></li>
+    <li data-menuanchor="wedding-day"><a href="#_wedding-day">Third section</a></li>
+    <li data-menuanchor="venue"><a href="#_venue">Fourth section</a></li>
+    <li data-menuanchor="rsvp"><a href="#_join-us">Fourth section</a></li>
+    <li data-menuanchor="what-to-wear"><a href="#_what-to-wear">Fourth section</a></li>
+    <li data-menuanchor="gift"><a href="#_gift">Fourth section</a></li>
+    <li data-menuanchor="faq"><a href="#_faq">Fourth section</a></li>
+    <li data-menuanchor="countdown"><a href="#_countdown">Fourth section</a></li>
+  </ul>
+
   <div id="app">
     <div id="all-pages">
-
-      <section class="section header scroll-section text-black auto_height" id="_hero">
-        <div class="header-details text-center fade-in" data-observer>
+      <section class="section header scroll-section text-black" id="_hero">
+        <div class="header-details text-center fade-in">
           <h1>Ian &amp; Ana</h1>
           <h3>Are Getting Married</h3>
         </div>
         <div class="header__video">
           <video playsinline="playsinline" muted="muted" autoplay="autoplay" loop="loop" src="./assets/images/2c56f7aa-57d1-4f16-80f2-6c17f384d0ff.mp4"></video>
         </div>
-        
+        <div class="navbar-mobile">
+          <div class="container">
+            <button type="button" class="toggle-menu">Menu</button>
+            <a href="#" class="btn-rsvp">RSVP</a>
+          </div>
+        </div>
+
         <div class="navbar">
           <div class="container">
             <nav>
@@ -46,9 +64,9 @@
       
       <section class="section scroll-section" id="_introduction">
         <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_1.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_2.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
+          <img class="foating-flower flower-left" src="./assets/images/flower_1.svg" alt="Floating flower">
+          <img class="foating-flower flower-right" src="./assets/images/flower_2.svg" alt="Floating flower">
+          <div class="wedding-details fade-in">
             <div class="badge">Intro</div>
             <h5>Tanong kasi kayo ng tanong kung kelan <br> ang kasal. So, ito na sa wakas.</h5>
           </div>
@@ -57,13 +75,13 @@
   
       <section class="section scroll-section" id="_wedding-day">
         <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_3.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_4.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
+          <img class="foating-flower flower-left" src="./assets/images/flower_3.svg" alt="Floating flower">
+          <img class="foating-flower flower-right" src="./assets/images/flower_4.svg" alt="Floating flower">
+          <div class="wedding-details fade-in">
             <div class="badge">Wedding Day</div>
             <h5>Sunday, December 03, 2023 <br> 4:00 PM - 9:00 PM</h5>
             <div class="wedding-cta">
-              <a href="#" class="btn btn-white">Schedule</a>
+              <a href="/wedding-day.html" class="btn btn-white">Schedule</a>
               <!-- <a href="#" class="btn">Save the date</a> -->
   
               <add-to-calendar-button 
@@ -73,6 +91,7 @@
                 startTime="16:00"
                 endDate="2023-12-03"
                 endTime="21:00"
+                size="9"
                 timeZone="Asia/Manila"
                 location="The Grounds Events Place"
                 options="'Apple','Google','Microsoft365'"
@@ -87,14 +106,14 @@
   
       <section class="section scroll-section" id="_venue">
         <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_1.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_2.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
+          <img class="foating-flower flower-left" src="./assets/images/flower_1.svg" alt="Floating flower">
+          <img class="foating-flower flower-right" src="./assets/images/flower_2.svg" alt="Floating flower">
+          <div class="wedding-details fade-in">
             <div class="badge">Venue</div>
             <h5>The Grounds Event Place</h5>
             <p>9022 Provincial Road Sitio Gulod Sapang Palay <br> Proper 3023 San Jose del Monte, Philippines</p>
             <div class="wedding-cta">
-              <a href="#" class="btn">Let us guide you</a>
+              <a href="/venue.html" class="btn">Let us guide you</a>
             </div>
           </div>
         </div>
@@ -102,9 +121,9 @@
   
       <section class="section scroll-section" id="_join-us">
         <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_5.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_6.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
+          <img class="foating-flower flower-left" src="./assets/images/flower_5.svg" alt="Floating flower">
+          <img class="foating-flower flower-right" src="./assets/images/flower_6.svg" alt="Floating flower">
+          <div class="wedding-details fade-in">
             <div class="badge">Join Us</div>
             <h5>We are excited to be a part of this special <br> day and we're really excited to to see you <br> and hope you can join us!</h5>
             <div class="wedding-cta">
@@ -116,9 +135,9 @@
   
       <section class="section scroll-section" id="_what-to-wear">
         <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_4.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_7.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
+          <img class="foating-flower flower-left" src="./assets/images/flower_4.svg" alt="Floating flower">
+          <img class="foating-flower flower-right" src="./assets/images/flower_7.svg" alt="Floating flower">
+          <div class="wedding-details fade-in">
             <div class="badge">What to wear</div>
             <h5>Semi-formal with these color palette</h5>
             <ul class="color-palette">
@@ -130,7 +149,7 @@
               <li style="background-color: #BAB0A7;"></li>
             </ul>
             <div class="wedding-cta">
-              <a href="#" class="btn">Attire Guide</a>
+              <a href="/guest-attire.html" class="btn">Attire Guide</a>
             </div>
           </div>
         </div>
@@ -138,9 +157,9 @@
   
       <section class="section scroll-section" id="_gift">
         <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_8.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_1.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
+          <img class="foating-flower flower-left" src="./assets/images/flower_8.svg" alt="Floating flower">
+          <img class="foating-flower flower-right" src="./assets/images/flower_1.svg" alt="Floating flower">
+          <div class="wedding-details fade-in">
             <div class="badge">Gift</div>
             <h5>The Grounds Event Place</h5>
             <p>Your presence at our Wedding is the <br> greatest present of all. However, syempre <br> mas masaya if may gifts kayo!</p>
@@ -153,13 +172,13 @@
   
       <section class="section scroll-section" id="_faq">
         <div class="container text-container container-radius">
-          <img class="foating-flower flower-left" src="./assets/images/plant_2.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/plant_1.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
+          <img class="foating-flower flower-left" src="./assets/images/plant_2.svg" alt="Floating flower">
+          <img class="foating-flower flower-right" src="./assets/images/plant_1.svg" alt="Floating flower">
+          <div class="wedding-details fade-in">
             <div class="badge">Q &amp; A</div>
             <p>I know you have a lot of question in mind, <br> kaya meron kaming inihandang <br> kasagutan sa iyong mga katanungan</p>
             <div class="wedding-cta">
-              <a href="#" class="btn">Click here</a>
+              <a href="/faq.html" class="btn">Click here</a>
             </div>
           </div>
         </div>
@@ -167,9 +186,8 @@
 
       <section class="section scroll-section" id="_countdown">
         <div class="container text-container container-transparent">
-          <div class="wedding-details fade-in" data-observer>
-            <h2 id="countdownDays"></h2>
-            <span class="countdow-days">Days to go!</span>
+          <div class="wedding-details fade-in">
+            <div class="countdown"><span id="countdownDays"></span> <p>Days to go!</p></div>
             <p>Help us capture the love! We would love to see <br> our wedding through your eyes. Please <br> upload your photos</p>
             <div class="wedding-cta">
               <a href="#" class="btn">Upload here</a>

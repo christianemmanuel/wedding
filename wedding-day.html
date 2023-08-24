@@ -13,176 +13,68 @@
 
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/mobile.css">
 </head>
 <body>
 
   <div id="app">
-    <div id="all-pages">
+    <section class="section scroll-section min-h-100 section-inner-page" id="_wedding-day">
+      <img class="foating-flower flower-left is-visible" src="./assets/images/flower_4.svg" alt="Floating flower">
+      <img class="foating-flower flower-right is-visible" src="./assets/images/flower_7.svg" alt="Floating flower">
+      <div class="container text-container container-transparent">
+        <div class="breadcrumbs">
+          <a href="/index.html#wedding-day">
+            <i class="icon icon-arrow-back"></i>
+            <p>Go back</p>
+          </a>
+        </div>
+        <div class="wedding-details mt-1">
+          <div class="badge wbg">Wedding Day</div>
+          <h2 class="mt-1">Sunday, December 03, 2023</h2>
+          <h5 class="mt-1" id="days-until"><span id="countdownDays"></span> days until we say... I do!</h5> 
+          
+          <div class="wedding-cta">
+            <add-to-calendar-button 
+              name="Ian & Ana Wedding Day"
+              description="Join us on a day of love and joy as Ian and Ana embark on their journey of togetherness."
+              startDate="2023-12-03"
+              startTime="16:00"
+              endDate="2023-12-03"
+              endTime="21:00"
+              size="9"
+              timeZone="Asia/Manila"
+              location="The Grounds Events Place"
+              options="'Apple','Google','Microsoft365'"
+              buttonStyle="round"
+              hideCheckmark
+              label="Save the date"
+            ></add-to-calendar-button>
+          </div>
+        </div>
 
-      <section class="header scroll-section text-black auto_height" id="header">
-        <div class="header-details text-center fade-in" data-observer>
-          <h1>Ian &amp; Ana</h1>
-          <h3>Are Getting Married</h3>
-        </div>
-        <div class="header__video">
-          <video playsinline="playsinline" muted="muted" autoplay="autoplay" loop="loop" src="./assets/images/2c56f7aa-57d1-4f16-80f2-6c17f384d0ff.mp4"></video>
-        </div>
-        
-        <div class="navbar">
-          <div class="container">
-            <nav>
-              <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Wedding Day Schedule</a></li>
-                <li><a href="#">Location</a></li>
-                <li><a href="#">Registry</a></li>
-                <li><a href="#">Q &amp; A</a></li>
-                <li><a href="#">Rsvp</a></li>
-              </ul>
-            </nav>
+        <div class="wedding-detail-table">
+          <div class="detail-item">
+            <p>3:00 PM - 4:00 PM</p>
+            <p>Opening</p>
+          </div>
+          <div class="detail-item">
+            <p>4:00 PM - 5:00 PM</p>
+            <p>Wedding Ceremony</p>
+          </div>
+          <div class="detail-item">
+            <p>6:00 PM - 9:00 PM</p>
+            <p>Reception</p>
           </div>
         </div>
-      </section>
-      
-      <section class="scroll-section" id="intro">
-        <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_1.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_2.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
-            <div class="badge">Intro</div>
-            <h5>Tanong kasi kayo ng tanong kung kelan <br> ang kasal. So, ito na sa wakas.</h5>
-          </div>
-        </div>
-      </section>
-  
-      <section class="scroll-section" id="wedding-day">
-        <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_3.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_4.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
-            <div class="badge">Wedding Day</div>
-            <h5>Sunday, December 03, 2023 <br> 4:00 PM - 9:00 PM</h5>
-            <div class="wedding-cta">
-              <a href="#" class="btn btn-white">Schedule</a>
-              <!-- <a href="#" class="btn">Save the date</a> -->
-  
-              <add-to-calendar-button 
-                name="Ian & Ana Wedding Day"
-                description="Join us on a day of love and joy as Ian and Ana embark on their journey of togetherness."
-                startDate="2023-12-03"
-                startTime="16:00"
-                endDate="2023-12-03"
-                endTime="21:00"
-                timeZone="Asia/Manila"
-                location="The Grounds Events Place"
-                options="'Apple','Google','Microsoft365'"
-                buttonStyle="round"
-                hideCheckmark
-                label="Save the date"
-              ></add-to-calendar-button>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="scroll-section" id="venue">
-        <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_1.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_2.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
-            <div class="badge">Venue</div>
-            <h5>The Grounds Event Place</h5>
-            <p>9022 Provincial Road Sitio Gulod Sapang Palay <br> Proper 3023 San Jose del Monte, Philippines</p>
-            <div class="wedding-cta">
-              <a href="#" class="btn">Let us guide you</a>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="scroll-section" id="join-us">
-        <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_5.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_6.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
-            <div class="badge">Join Us</div>
-            <h5>We are excited to be a part of this special <br> day and we're really excited to to see you <br> and hope you can join us!</h5>
-            <div class="wedding-cta">
-              <a href="#" class="btn">RSVP</a>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="scroll-section" id="what-to-wear">
-        <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_4.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_7.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
-            <div class="badge">Waht to wear</div>
-            <h5>Semi-formal with these color palette</h5>
-            <ul class="color-palette">
-              <li style="background-color: #9E4831;"></li>
-              <li style="background-color: #B97049;"></li>
-              <li style="background-color: #B99470;"></li>
-              <li style="background-color: #69735A;"></li>
-              <li style="background-color: #EEE2D2;"></li>
-              <li style="background-color: #BAB0A7;"></li>
-            </ul>
-            <div class="wedding-cta">
-              <a href="#" class="btn">Attire Guide</a>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="scroll-section" id="gift">
-        <div class="container text-container">
-          <img class="foating-flower flower-left" src="./assets/images/flower_8.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/flower_1.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
-            <div class="badge">Gift</div>
-            <h5>The Grounds Event Place</h5>
-            <p>Your presence at our Wedding is the <br> greatest present of all. However, syempre <br> mas masaya if may gifts kayo!</p>
-            <div class="wedding-cta">
-              <a href="#" class="btn">Wishlist</a>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="scroll-section" id="question-and-answer">
-        <div class="container text-container container-radius">
-          <img class="foating-flower flower-left" src="./assets/images/plant_2.svg" alt="Floating flower" data-observer>
-          <img class="foating-flower flower-right" src="./assets/images/plant_1.svg" alt="Floating flower" data-observer>
-          <div class="wedding-details fade-in" data-observer>
-            <div class="badge">Q &amp; A</div>
-            <p>I know you have a lot of question in mind, <br> kaya meron kaming inihandang <br> kasagutan sa iyong mga katanungan</p>
-            <div class="wedding-cta">
-              <a href="#" class="btn">Click here</a>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="scroll-section" id="countdown">
-        <div class="container text-container container-transparent">
-          <div class="wedding-details fade-in" data-observer>
-            <h2 id="countdownDays"></h2>
-            <span class="countdow-days">Days to go!</span>
-            <p>Help us capture the love! We would love to see <br> our wedding through your eyes. Please <br> upload your photos</p>
-            <div class="wedding-cta">
-              <a href="#" class="btn">Upload here</a>
-            </div>
-          </div>
+        <div class="note mt-2 shake-effect" data-observer>
+          <p>The complete schedule is not yet available. For further inquiries, please click here.</p>
         </div>
-      </section>
-
-    </div>
+      </div>
+    </section>
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
-  <script src="./assets/js/fullpage-section.js.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -4,7 +4,6 @@ function autoHeight() {
   var autoHeight = document.querySelectorAll('.auto_height');
 
   if($winHeight > 520){
-    // alert($winHeight)
     for (i = 0; i < autoHeight.length; i++) {
       autoHeight[i].style.minHeight = $winHeight - 1 + "px";
     }
@@ -59,38 +58,66 @@ targets.forEach(target => {
 })
 
 
-// Countdown
-var countDownDate = new Date("Dec 3, 2023 16:00:00").getTime();
+// Countdown 
+function daysUntilDecember3(dateString) {
+  const targetDate = new Date(dateString);
+  const december3 = new Date(targetDate.getFullYear(), 11, 3); // Months are zero-based, so 11 represents December
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+  const timeDifference = december3 - targetDate;
+  const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
-  // Get today's date and time
-  var now = new Date().getTime();
+  return daysDifference;
+}
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+const currentDate = new Date(); // Get the current date
+const daysRemaining = daysUntilDecember3(currentDate);
+let countdownDiv = document.getElementById("countdownDays");
+let daysUntil = document.getElementById('days-until');
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("countdownDays").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdownDays").innerHTML = "Happy Wedding!!!";
-    document.querySelector('.countdow-days').remove();
-  }
-}, 1000);
+if(countdownDiv) {
+  var x = setInterval(function() {
+    if(daysUntil) {
+      daysUntil.style.display = "block";
+    }
+    countdownDiv.innerHTML = daysRemaining;
+    if(daysRemaining <= 0) {
+      countdownDiv.innerHTML = "Happy Wedding!!!";
+    }
+  }, 1000);
+}
 
 
-fullpage.initialize('#all-pages', {
-	menu: '#menu',
-	anchors:['hero', 'introduction', 'wedding-day', 'venue', 'rsvp', 'what-to-wear', 'gift', 'faq', 'countdown'],
-	css3: true,
+let allPages = document.getElementById("all-pages");
+if(allPages) {
+  fullpage.initialize('#all-pages', {
+    menu: '#menu',
+    anchors:['hero', 'introduction', 'wedding-day', 'venue', 'rsvp', 'what-to-wear', 'gift', 'faq', 'countdown'],
+    css3: true,
+  });  
+}
+
+
+const accordion = document.querySelectorAll('.accordion-item');
+
+accordion.forEach(item => {
+  const header = item.querySelector('.accordion-head');
+  header.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
 });
+
+const toggleMenu = document.querySelector('.toggle-menu');
+
+toggleMenu.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('body').classList.toggle('active-menu')
+})
+
+const navLink = document.querySelectorAll('nav a');
+
+navLink.forEach((e) => {
+  e.addEventListener('click', () => {
+    this.document.querySelector('body').classList.remove('active-menu')
+  })
+})
+
