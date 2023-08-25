@@ -93,6 +93,7 @@ if(allPages) {
     menu: '#menu',
     anchors:['hero', 'introduction', 'wedding-day', 'venue', 'rsvp', 'what-to-wear', 'gift', 'faq', 'countdown'],
     css3: true,
+    scrollBar: true
   });  
 }
 
