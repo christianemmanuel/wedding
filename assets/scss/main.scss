@@ -6,9 +6,6 @@ $color-swan-white: #7C6E67;
 
 $font-body: 'Quicksand', sans-serif;
 $font-lora: 'Lora', serif;
-body, html {
-  height: 100%;
-}
 a {
   color: $color-white;
 }
@@ -80,11 +77,6 @@ p {
   -o-transition: $duration;
   transition: $duration;
 }
-#app {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 .section {
   position: relative;
   display: flex;
@@ -94,43 +86,43 @@ p {
   scroll-snap-align: start;
   flex-direction: column;
 }
-#_introduction { 
+._introduction { 
   background-color: #9E4831;
   .badge {
     background-color: #9E4831;
   }
 }
-#_wedding-day { 
+._wedding-day { 
   background-color: #B99470; 
   .badge {
     background-color: #B99470;
   }
 }
-#_venue { 
+._venue { 
   background-color: #69735A; 
   .badge {
     background-color: #69735A;
   }
 }
-#_join-us { 
+._join-us { 
   background-color: #B97049; 
   .badge {
     background-color: #B97049;
   }
 }
-#_what-to-wear { 
+._what-to-wear { 
   background-color: $color-flesh; 
   .badge {
     background-color: $color-flesh;
   }
 }
-#_gift { 
+._gift { 
   background-color: #B99470; 
   .badge {
     background-color: #B99470;
   }
 }
-#_faq, #_countdown { 
+._faq, ._countdown { 
   background-color: #F2E9DD; 
   color: $color-swan-white;
   .badge {
@@ -142,7 +134,7 @@ p {
     color: $color-swan-white;
   }
 }
-#_countdown {
+._countdown {
   .btn {
     border-color: #7c311e;
     color: #ffffff;
@@ -225,7 +217,7 @@ nav {
 }
 
 
-#_hero {
+._hero {
   background-color: #F2E9DD; 
   z-index: 1; 
   overflow: hidden;
@@ -469,8 +461,8 @@ img {
   transform: translateX(45px);
   transition-delay: 680ms;
 }
-#_introduction,
-#_venue {
+._introduction,
+._venue {
   .flower-left {
     left: -34px;
   }
@@ -478,7 +470,7 @@ img {
     right: -53px;
   }
 }
-#_wedding-day {
+._wedding-day {
   .flower-left {
     left: -74px;
   }
@@ -486,7 +478,7 @@ img {
     right: -73px;
   }
 }
-#_join-us {
+._join-us {
   .flower-left {
     left: -58px;
   }
@@ -494,7 +486,7 @@ img {
     right: -68px;
   }
 }
-#_what-to-wear {
+._what-to-wear {
   .flower-left {
     left: -78px;
   }
@@ -502,7 +494,7 @@ img {
     right: -128px;
   }
 }
-#_gift {
+._gift {
   .flower-left {
     left: -98px;
   }
@@ -510,7 +502,7 @@ img {
     right: -34px;
   }
 }
-#_faq {
+._faq {
   .container-radius {
     border-bottom-left-radius: 500px;
     border-bottom-right-radius: 500px;
@@ -789,7 +781,7 @@ html.fp-enabled,
   left: 20px;
 }
 
-#_countdown {
+._countdown {
   background-image: url('../images/prenup_1.JPG');
   background-size: cover;
   background-repeat: no-repeat;
@@ -921,8 +913,8 @@ html.fp-enabled,
     margin-top: inherit;
   }
 }
-#_wedding-day,
-#_what-to-wear {
+._wedding-day,
+._what-to-wear {
   &.section-inner-page {
     .flower-right {
       right: -31px;
@@ -934,7 +926,7 @@ html.fp-enabled,
     }
   }
 }
-#_venue {
+._venue {
   &.section-inner-page {
     .flower-right {
       right: 0;
@@ -1104,7 +1096,7 @@ ul.listing {
   width: 100%;
 }
 @media screen and (max-width: 820px) {
-  #_countdown {
+  ._countdown {
     background-image: url(../images/prenup_2.JPG);
   }
 }
@@ -1130,4 +1122,15 @@ ul.listing {
       background-color: rgba(0,0,0,1);
     }
   }
+}
+.fp-overflow {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  flex-direction: column;
+  overflow-x: hidden;
 }

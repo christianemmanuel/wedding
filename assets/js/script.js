@@ -87,14 +87,12 @@ if(countdownDiv) {
 }
 
 
-let allPages = document.getElementById("all-pages");
+let allPages = document.getElementById("fullpage");
 if(allPages) {
-  fullpage.initialize('#all-pages', {
-    menu: '#menu',
-    anchors:['hero', 'introduction', 'wedding-day', 'venue', 'rsvp', 'what-to-wear', 'gift', 'faq', 'countdown'],
-    css3: true,
-    scrollBar: true
-  });  
+  new fullpage('#fullpage', {
+    anchors: ['hero', 'introduction', 'wedding-day', 'venue', 'rsvp', 'what-to-wear', 'gift', 'faq', 'countdown'],
+  });
+  
 }
 
 
@@ -109,10 +107,12 @@ accordion.forEach(item => {
 
 const toggleMenu = document.querySelector('.toggle-menu');
 
-toggleMenu.addEventListener('click', (e) => {
-  e.preventDefault();
-  document.querySelector('body').classList.toggle('active-menu')
-})
+if(toggleMenu) {
+  toggleMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('body').classList.toggle('active-menu')
+  }) 
+}
 
 const navLink = document.querySelectorAll('nav a');
 

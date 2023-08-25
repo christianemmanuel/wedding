@@ -8,7 +8,7 @@
     font-size: clamp(50px, 10vw, 7.5rem);
     color: #fff;
   }
-  #_hero {
+  ._hero {
     background-image: url(../images/prenup_2_1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,6 +28,7 @@
     }
   }
   .navbar {
+    position: fixed;
     top: 66px;
     height: 100%;
     padding: 0;
@@ -199,7 +200,7 @@
     gap: 0;
     margin-top: 0;
   }
-  #_faq .container-radius {
+  ._faq .container-radius {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
