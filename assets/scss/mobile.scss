@@ -29,8 +29,8 @@
   }
   .navbar {
     position: fixed;
-    top: 66px;
-    height: calc(100% - 66px);
+    top: 0;
+    height: 100%;
     padding: 0;
     overflow-y: auto;
     background-color: rgba(158,72,49,0.9);
@@ -62,6 +62,10 @@
       top: 0;
     }
     &.active-menu {
+      .btn-rsvp {
+        background-color: #ffffff;
+        color: #9E4831;
+      }
       .navbar {
         opacity: 1;
         visibility: visible;
@@ -124,6 +128,7 @@
     border-radius: 50px;
     text-transform: uppercase;
     text-decoration: none;
+    font-weight: 500;
   }
   .container {
     padding: 0 1.025rem;
@@ -233,5 +238,15 @@
   .wedding-details .countdown p {
     font-size: 36px;
     margin: .75rem 0;
+  }
+  ._faq {
+   &.active {
+    .flower-left {
+      transform: scale(0.5) !important;
+    }
+    .flower-right {
+      transform: scale(0.5) !important;
+    }
+   }
   }
 }
