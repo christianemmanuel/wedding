@@ -240,13 +240,11 @@
     margin: .75rem 0;
   }
   ._faq {
-   &.active {
     .flower-left {
       transform: scale(0.5) !important;
     }
     .flower-right {
       transform: scale(0.5) !important;
     }
-   }
   }
 }
