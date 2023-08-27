@@ -30,7 +30,7 @@
   .navbar {
     position: fixed;
     top: 0;
-    height: 100%;
+    height: 100vh;
     padding: 0;
     overflow-y: auto;
     background-color: rgba(158,72,49,0.9);
@@ -227,11 +227,9 @@
   }
   .active {
     .flower-right {
-      right: 0 !important;
       opacity: 0.4 !important;
     } 
     .flower-left {
-      left: 0 !important;
       opacity: 0.4 !important;
     } 
   }
