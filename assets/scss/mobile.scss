@@ -170,9 +170,15 @@
 @media only screen and (max-width: 768px) {
   .flower-right {
     top: 30px !important;
+    transition-delay: 100ms;
   }
   .flower-left {
+    transition-delay: 180ms;
     bottom: 30px !important;
+  }
+  .fade-in {
+    opacity: 0.5;
+    transition-delay: 100ms;
   }
   h1 {
     font-size: clamp(50px, 15vw, 7.5rem);
