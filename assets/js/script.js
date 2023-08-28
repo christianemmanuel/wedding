@@ -82,6 +82,7 @@ if(countdownDiv) {
     countdownDiv.innerHTML = daysRemaining;
     if(daysRemaining <= 0) {
       countdownDiv.innerHTML = "Happy Wedding!!!";
+      document.querySelector('.sayido').remove();
     }
   }, 1000);
 }
@@ -91,10 +92,13 @@ let allPages = document.getElementById("fullpage");
 if(allPages) {
   new fullpage('#fullpage', {
     anchors: ['hero', 'introduction', 'wedding-day', 'venue', 'rsvp', 'what-to-wear', 'gift', 'faq', 'countdown'],
+    onLeave: function(origin, destination, direction, trigger) {
+      if(origin.index == 1 && direction == 'up') {
+        document.getElementById("prenup-video").play();
+      }
+    }
   });
-  
 }
-
 
 const accordion = document.querySelectorAll('.accordion-item');
 

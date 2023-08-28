@@ -131,7 +131,7 @@
     font-weight: 500;
   }
   .container {
-    padding: 0 1.025rem;
+    padding: 0 1.75rem;
   }
 
 
@@ -153,7 +153,18 @@
       opacity: 0.7 !important;
     } 
   }
-
+  .section-inner-page {
+    .flower-right,
+    .flower-left {
+      display: none !important;
+    }
+  }
+  .breadcrumbs {
+    margin-bottom: 60px;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -192,10 +203,72 @@
     gap: 20px 25px;
   }
   .badge {
-    font-size: 1.5rem;
     height: 47px;
     padding: 0 2rem;
     font-size: 1.2rem;
+  }
+  .wedding-detail-table {
+    margin-top: 3.5rem;
+    .detail-item {
+      height: auto;
+      flex-direction: column-reverse;
+      padding: 1.6rem 0;
+      p {
+        line-height: 1.47em;
+      }
+    }
+  }
+  .wedding-detail-content {
+    padding: 2.5rem;
+    margin-top: 3.5rem;
+    &.mt-3 {
+      margin-top: 1.75rem !important;
+    }
+  }
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.75rem;
+  }
+  .max-w-90 {
+    max-width: 100%;
+  }
+  .accommodation-detail {
+    padding: 40px 0;
+  }
+  .shake-effect {
+    &.is-visible {
+      animation: shake 200ms 2 linear;
+      -moz-animation: shake 200ms 2 linear;
+      -webkit-animation: shake 200ms 2 linear;
+      -o-animation: shake 200ms 2 linear;
+    }
+  }
+  @keyframes shake {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  .section-inner-page {
+    .color-palette {
+      margin-top: 1.85rem;
+    }
+  }
+  .accordion-item {
+    padding: 0 1.9em;
+    margin-top: 20px;
+    .accordion-head {
+      padding: 1.8rem 0;
+      padding-right: 23px;
+    }
+  }
+  h4 {
+    font-size: 1.25rem;
   }
 }
 
@@ -204,7 +277,7 @@
     padding: 0 1.75rem;
   }
   h5, p {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   br {
     display: none;
@@ -243,6 +316,92 @@
     }
     .flower-right {
       transform: scale(0.5) !important;
+    }
+  }
+  .wedding-detail-table {
+    margin-top: 2.5rem;
+    padding: 0;
+    .detail-item {
+      p {
+        font-size: 20px;
+        &:first-child {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .note {
+    margin-top: 1rem !important;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .breadcrumbs {
+    margin-bottom: 50px;
+  }
+  #days-until {
+    margin-bottom: 1rem !important;
+  }
+  .badge {
+    font-size: 1rem;
+  }
+  .wedding-detail-content {
+    padding: 2rem 1.75rem;
+  }
+  .wedding-details {
+    &.mt-5 {
+      margin-top: 3rem !important;
+    }
+  }
+  .btn {
+    height: 52px;
+    font-size: 1.05rem;
+    min-width: 170px;
+    padding: 0 1.75rem;
+  }
+  ._hero .header-details h1::after {
+    bottom: -20px;
+  }
+  ._what-to-wear {
+    .wedding-details {
+      margin-top: 0 !important;
+      .mt-1 {
+        margin-top: 0 !important;
+      }
+    }
+  }
+  p.font-small {
+    font-size: 1.05rem !important;
+    line-height: 1.65rem;
+  }
+  ul {
+    &.listing {
+      margin-top: 1rem;
+      padding-left: 1.75rem;
+      li {
+        font-size: 1rem;
+        line-height: 1.65rem;
+      }
+    }
+  }
+  .accordion-list {
+    &.mt-3 {
+      margin-top: 1.75rem !important;
+    }
+  }
+  .accordion-item {
+    padding: 0 1.55em;
+    margin-top: 18px;
+  }
+  h4 {
+    font-size: 1.05rem;
+  }
+  .breadcrumbs {
+    a {
+      padding: 0.42rem 0;
+      p {
+        font-size: 18px !important;
+      }
     }
   }
 }

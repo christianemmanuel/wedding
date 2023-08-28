@@ -855,8 +855,12 @@ html.fp-enabled,
     height: 80px;
     align-items: center;
     border-bottom: 1px dashed #F2E9DD;
+    @include transition(all ease-in-out 180ms);
     &:last-child {
       border-bottom: none;
+    }
+    &:hover {
+      color: #694d33;
     }
   }
   p {
@@ -889,7 +893,7 @@ html.fp-enabled,
   border-bottom: 1px solid #F2E9DD;
   padding-bottom: 0.5rem;
   margin-top: 0.75rem;
-  margin-bottom: 100px;
+  margin-bottom: 85px;
   a {
     display: flex;
     align-items: center;
@@ -918,12 +922,15 @@ html.fp-enabled,
 ._what-to-wear {
   &.section-inner-page {
     .flower-right {
-      right: -31px;
+      right: 0;
+      opacity: 1;
     }
     .flower-left {
       left: 0;
       bottom: auto;
       top: 100px;
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }
@@ -933,11 +940,14 @@ html.fp-enabled,
       right: 0;
       transform: rotateZ(-34deg);
       top: 100px;
+      opacity: 1;
     }
     .flower-left {
       left: 0;
       bottom: auto;
       top: 100px;
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }
@@ -1041,12 +1051,11 @@ ul.listing {
   border-radius: 20px;
   position: relative;
   display: block;
-  padding: 0 3.75em 0 3.75em;
+  padding: 0 3.75em;
   margin-top: 1.75rem;
   .accordion-head {
     cursor: pointer;
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
+    padding: 2.2rem 0;
     position: relative;
     &:hover {
       color: $color-brown;
@@ -1070,6 +1079,10 @@ ul.listing {
     border-top: 1px dashed #B1A79F;
     padding-top: 1rem;
     display: none;
+    a {
+      color: $color-swan-white;
+      text-decoration: underline;
+    }
   }
   &.active {
     .accordion-head {
@@ -1098,7 +1111,7 @@ ul.listing {
 }
 @media screen and (max-width: 820px) {
   ._countdown {
-    background-image: url(../images/prenup_2.JPG);
+    background-image: url(../images/prenup_2_2.jpg);
   }
 }
 #menu {
@@ -1134,4 +1147,7 @@ ul.listing {
   scroll-snap-align: start;
   flex-direction: column;
   overflow-x: hidden;
+}
+.note {
+  text-align: center;
 }

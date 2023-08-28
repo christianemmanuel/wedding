@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/fullpage.css">
+  <link rel="stylesheet" href="./assets/css/fullpage.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/mobile.css">
 </head>
@@ -21,7 +21,7 @@
   <div class="navbar-mobile">
     <div class="container">
       <button type="button" class="toggle-menu">Menu</button>
-      <a href="#" class="btn-rsvp">RSVP</a>
+      <a href="https://forms.gle/ZuYHNdGzqX9Nj5cM7" class="btn-rsvp">RSVP</a>
     </div>
   </div>
 
@@ -32,7 +32,7 @@
         <h3>Are Getting Married</h3>
       </div>
       <div class="header__video">
-        <video playsinline="playsinline" muted="muted" autoplay="autoplay" loop="loop" src="./assets/images/2c56f7aa-57d1-4f16-80f2-6c17f384d0ff.mp4"></video>
+        <video playsinline="playsinline" muted="muted" id="prenup-video" autoplay="autoplay" loop="loop" src="./assets/images/prenup-video.mp4"></video>
       </div>
 
       <div class="navbar">
@@ -44,7 +44,7 @@
               <li><a href="#venue">Location</a></li>
               <li><a href="#rsvp">Registry</a></li>
               <li><a href="#faq">Q &amp; A</a></li>
-              <li><a href="#rsvp">Rsvp</a></li>
+              <li><a href="https://forms.gle/ZuYHNdGzqX9Nj5cM7">Rsvp</a></li>
             </ul>
           </nav>
         </div>
@@ -70,7 +70,7 @@
           <div class="badge">Wedding Day</div>
           <h5>Sunday, December 03, 2023 <br> 4:00 PM - 9:00 PM</h5>
           <div class="wedding-cta">
-            <a href="/wedding-day.html" class="btn btn-white">Schedule</a>
+            <a href="/wedding/wedding-day" class="btn btn-white">Schedule</a>
             <!-- <a href="#" class="btn">Save the date</a> -->
 
             <add-to-calendar-button 
@@ -83,7 +83,7 @@
               size="9"
               timeZone="Asia/Manila"
               location="The Grounds Events Place"
-              options="'Apple','Google','Microsoft365'"
+              options="'Google','Apple'"
               buttonStyle="round"
               hideCheckmark
               label="Save the date"
@@ -102,7 +102,7 @@
           <h5>The Grounds Event Place</h5>
           <p>9022 Provincial Road Sitio Gulod Sapang Palay <br> Proper 3023 San Jose del Monte, Philippines</p>
           <div class="wedding-cta">
-            <a href="/venue.html" class="btn">Let us guide you</a>
+            <a href="/wedding/venue" class="btn">Let us guide you</a>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@
           <div class="badge">Join Us</div>
           <h5>We are excited to be a part of this special <br> day and we're really excited to to see you <br> and hope you can join us!</h5>
           <div class="wedding-cta">
-            <a href="#" class="btn">RSVP</a>
+            <a href="https://forms.gle/ZuYHNdGzqX9Nj5cM7" class="btn">RSVP</a>
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@
             <li style="background-color: #BAB0A7;"></li>
           </ul>
           <div class="wedding-cta">
-            <a href="/guest-attire.html" class="btn">Attire Guide</a>
+            <a href="/wedding/guest-attire" class="btn">Attire Guide</a>
           </div>
         </div>
       </div>
@@ -167,7 +167,7 @@
           <div class="badge">Q &amp; A</div>
           <p>I know you have a lot of question in mind, <br> kaya meron kaming inihandang <br> kasagutan sa iyong mga katanungan</p>
           <div class="wedding-cta">
-            <a href="/faq.html" class="btn">Click here</a>
+            <a href="/wedding/faq" class="btn">Click here</a>
           </div>
         </div>
       </div>
@@ -179,7 +179,7 @@
           <div class="countdown"><span id="countdownDays"></span> <p>Days to go!</p></div>
           <p>Help us capture the love! We would love to see <br> our wedding through your eyes. Please <br> upload your photos</p>
           <div class="wedding-cta">
-            <a href="#" class="btn">Upload here</a>
+            <a href="https://bit.ly/3sxozeH" target="_blank" class="btn">Upload here</a>
           </div>
         </div>
       </div>
@@ -190,7 +190,7 @@
   
   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
   
-  <script src="./assets/fullpage.js"></script>
+  <script src="./assets/js/fullpage.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
