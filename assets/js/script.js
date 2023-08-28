@@ -96,7 +96,13 @@ if(allPages) {
       if(origin.index == 1 && direction == 'up') {
         document.getElementById("prenup-video").play();
       }
-    }
+    },
+    autoScrolling: true,
+    scrollHorizontally: false,
+    lazyLoading: false,
+    touchSensitivity: 10,
+    navigation: false,
+    responsiveWidth: 768
   });
 }
 
@@ -127,10 +133,3 @@ navLink.forEach((e) => {
 })
 
 
-const button = document.getElementById('mobile-back');
-
-button.addEventListener('click', () => {
-  window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
-    //blah blah blah
-    window.location.lasthash.pop();
-});
