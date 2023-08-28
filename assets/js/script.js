@@ -126,3 +126,11 @@ navLink.forEach((e) => {
   })
 })
 
+
+const button = document.getElementById('mobile-back');
+
+button.addEventListener('click', () => {
+  window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
+    //blah blah blah
+    window.location.lasthash.pop();
+});
