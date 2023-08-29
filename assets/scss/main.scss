@@ -138,7 +138,11 @@ p {
   .btn {
     border-color: #7c311e;
     color: #ffffff;
-    background-color: #96442F;
+    background-color: $color-brown;
+  }
+  p {
+    font-weight: 500;
+    color: $color-brown;
   }
 }
 * {
