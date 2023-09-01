@@ -1061,9 +1061,6 @@ ul.listing {
     cursor: pointer;
     padding: 2.2rem 0;
     position: relative;
-    &:hover {
-      color: $color-brown;
-    }
     &::after {
       position: absolute;
       display: block;
@@ -1086,6 +1083,27 @@ ul.listing {
     a {
       color: $color-swan-white;
       text-decoration: underline;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 15px;
+      margin-top: .35rem;
+      .strong {
+        &.title {
+          margin-top: 0;
+          margin-bottom: 0.45rem;
+          color: $color-brown;
+        }
+      }
+      li {
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
   &.active {
