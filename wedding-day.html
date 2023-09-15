@@ -5,15 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ian &amp; Ana - Wedding</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Source+Serif+4&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/mobile.css">
+
+  <link rel="stylesheet" href="./assets/css/addtocalendar.css" type="text/css" media="all" />
 </head>
 <body>
 
@@ -34,21 +30,16 @@
           <h5 class="mt-1" id="days-until"><span id="countdownDays"></span> <span class="sayido">days until we say... I do!</span></h5> 
           
           <div class="wedding-cta">
-            <add-to-calendar-button 
-              name="Ian & Ana Wedding Day"
-              description="Join us on a day of love and joy as Ian and Ana embark on their journey of togetherness."
-              startDate="2023-12-03"
-              startTime="16:00"
-              endDate="2023-12-03"
-              endTime="21:00"
-              size="9"
-              timeZone="Asia/Manila"
-              location="The Grounds Events Place"
-              options="'Google','Apple'"
-              buttonStyle="round"
-              hideCheckmark
-              label="Save the date"
-            ></add-to-calendar-button>
+            <!-- AddEvent button -->
+            <div title="Add to Calendar" class="addeventatc btn" data-styling="none">
+              Add to Calendar
+              <span class="start">12/03/2023 03:00 PM</span>
+              <span class="end">12/03/2023 09:00 PM</span>
+              <span class="timezone">Asia/Manila</span>
+              <span class="title">Ian &amp; Ana Wedding Day</span>
+              <span class="description">Join us on a day of love and joy as Ian and Ana embark on their journey of togetherness.</span>
+              <span class="location">The Grounds Events Place</span>
+            </div>
           </div>
         </div>
 
@@ -106,7 +97,7 @@
     </section>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+  <script src="./assets/js/atc.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -9,13 +9,18 @@
   <link rel="stylesheet" href="./assets/css/fullpage.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/mobile.css">
+
+  <link rel="stylesheet" href="./assets/css/addtocalendar.css" type="text/css" media="all" />
 </head>
 <body>
 
   <div class="navbar-mobile">
     <div class="container">
       <button type="button" class="toggle-menu">Menu</button>
-      <a href="https://forms.gle/ZuYHNdGzqX9Nj5cM7" target="_blank" class="btn-rsvp">RSVP</a>
+      <a href="https://forms.gle/TurSicSsXNmPXkoPA" onClick="(function(){
+        alert('Di ka invited!');
+        return false;
+    })();return false;" target="_blank" class="btn-rsvp">RSVP</a>
     </div>
   </div>
 
@@ -38,7 +43,10 @@
               <li><a href="#venue">Location</a></li>
               <li><a href="#rsvp">Registry</a></li>
               <li><a href="#faq">Q &amp; A</a></li>
-              <li><a href="https://forms.gle/ZuYHNdGzqX9Nj5cM7">Rsvp</a></li>
+              <li><a href="https://forms.gle/TurSicSsXNmPXkoPA" target="_blank" onClick="(function(){
+                alert('Di ka invited!');
+                return false;
+            })();return false;">Rsvp</a></li>
             </ul>
           </nav>
         </div>
@@ -64,24 +72,19 @@
           <div class="badge">Wedding Day</div>
           <h5>Sunday, December 03, 2023 <br> 4:00 PM - 9:00 PM</h5>
           <div class="wedding-cta">
-            <a href="/wedding-day" class="btn btn-white">Schedule</a>
+            <a href="/wedding-day" class="btn">Schedule</a>
 
-            <add-to-calendar-button 
-              name="Ian & Ana Wedding Day"
-              description="Join us on a day of love and joy as Ian and Ana embark on their journey of togetherness."
-              startDate="2023-12-03"
-              startTime="16:00"
-              endDate="2023-12-03"
-              endTime="21:00"
-              size="9"
-              timeZone="Asia/Manila"
-              location="The Grounds Events Place"
-              options="'Google','Apple'"
-              listStyle="modal"
-              buttonStyle="round"
-              hideCheckmark
-              label="Save the date"
-            ></add-to-calendar-button>
+            <!-- AddEvent button -->
+            <div title="Add to Calendar" class="addeventatc btn" data-styling="none">
+              Add to Calendar
+              <span class="start">12/03/2023 03:00 PM</span>
+              <span class="end">12/03/2023 09:00 PM</span>
+              <span class="timezone">Asia/Manila</span>
+              <span class="title">Ian &amp; Ana Wedding Day</span>
+              <span class="description">Join us on a day of love and joy as Ian and Ana embark on their journey of togetherness.</span>
+              <span class="location">The Grounds Events Place</span>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -110,7 +113,7 @@
           <div class="badge">Join Us</div>
           <h5>We are excited to be a part of this special <br> day and we're really excited to to see you <br> and hope you can join us!</h5>
           <div class="wedding-cta">
-            <a href="https://forms.gle/ZuYHNdGzqX9Nj5cM7" target="_blank" class="btn">RSVP</a>
+            <a href="https://forms.gle/TurSicSsXNmPXkoPA" target="_blank" class="btn">RSVP</a>
           </div>
         </div>
       </div>
@@ -177,12 +180,10 @@
         </div>
       </div>
     </section>
-
   </div>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
-  
+  <script src="./assets/js/atc.min.js"></script>
   <script src="./assets/js/fullpage.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>

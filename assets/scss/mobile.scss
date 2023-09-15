@@ -190,12 +190,15 @@
   h5, p {
     font-size: 24px;
   }
+  h5 {
+    font-size: 24px;
+    line-height: 2.2rem;
+  }
   p {
-    line-height: 2rem;
+    line-height: 2.4rem;
   }
   .wedding-cta {
     flex-direction: column-reverse;
-    gap: 0.5rem;
     padding-top: 0.5rem;
   }
   .btn.btn-white {
@@ -287,6 +290,7 @@
   }
   h5, p {
     font-size: 20px !important;
+    line-height: 2rem;
   }
   br {
     display: none;
@@ -321,10 +325,10 @@
   }
   ._faq {
     .flower-left {
-      transform: scale(0.5) !important;
+      transform: scale(0.4) !important;
     }
     .flower-right {
-      transform: scale(0.5) !important;
+      transform: scale(0.4) !important;
     }
   }
   .wedding-detail-table {
@@ -365,7 +369,7 @@
   .btn {
     height: 52px;
     font-size: 1.05rem;
-    min-width: 170px;
+    min-width: 185px;
     padding: 0 1.75rem;
   }
   ._hero .header-details h1::after {
@@ -381,7 +385,7 @@
   }
   p.font-small {
     font-size: 1.05rem !important;
-    line-height: 1.65rem;
+    line-height: 1.75rem;
   }
   ul {
     &.listing {
@@ -389,7 +393,7 @@
       padding-left: 1.75rem;
       li {
         font-size: 1rem;
-        line-height: 1.65rem;
+        line-height: 1.75rem;
       }
     }
   }
@@ -432,5 +436,8 @@
   }
   .section-inner-page {
     overflow-x: hidden;
+  }
+  .women-attire {
+    height: 300px;
   }
 }
