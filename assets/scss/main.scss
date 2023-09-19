@@ -57,11 +57,9 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-30px);
   }
   to {
     opacity: 1;
-    transform: none;
   }
 }
 ::selection {
@@ -259,7 +257,11 @@ nav {
 
 
 ._hero {
-  background-color: #F2E9DD; 
+  background-color: #F2E9DD;
+  background-image: url(../images/blur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   z-index: 1; 
   overflow: hidden;
   background-repeat: no-repeat;
