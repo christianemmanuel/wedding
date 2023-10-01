@@ -63,8 +63,8 @@ body {
   }
 }
 ::selection {
-  background: rgba(150, 68, 47, .5);
-  color: $color-brown;
+  background: rgba(0, 0, 0, .2);
+  color: $color-white;
 }
 h1, h2 {
   font-family: $font-lora;
@@ -1175,4 +1175,34 @@ ul.listing {
 }
 .note {
   text-align: center;
+}
+
+
+.verse {
+  position: relative;
+  color: #fff;
+  text-shadow: rgba(104,42,26,0.3) 1px 5px 7px;
+  margin-top: 5rem;
+  padding-top: 1.35rem;
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 26px;
+    background-size: 100%;
+    background-image: url(../images/ornamen-18.png);
+    background-repeat: no-repeat;
+  }
+  p {
+    margin: 0;
+  }
+  span {
+    font-style: italic;
+    display: block;
+    margin-top: 5px;
+  }
 }
