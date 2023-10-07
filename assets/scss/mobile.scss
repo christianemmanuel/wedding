@@ -33,7 +33,7 @@
     height: 100vh;
     padding: 0;
     overflow-y: auto;
-    background-color: rgba(158,72,49,0.9);
+    background-color: rgba(158,72,49,0.9) !important;
     opacity: 0;
     visibility: hidden;
     transition: all ease-in-out 180ms;
@@ -53,6 +53,7 @@
           text-align: center;
           font-size: 24px;
           padding: 10px 0;
+          color: #ffffff !important;
         }
       }
     }
@@ -61,6 +62,9 @@
     .navbar-mobile {
       top: 0;
     }
+    
+  }
+  body {
     &.active-menu {
       .btn-rsvp {
         background-color: #ffffff;
@@ -77,16 +81,20 @@
       }
     }
   }
+  // .fp-viewing-introduction {
+  //   .navbar-mobile {
+  //     top: -70px;
+  //   }
+  // }
   .navbar-mobile {
     display: block;
-    background-color: rgba(158,72,49,0.45);
-    box-shadow: 0 2px 10px rgba(104,42,26,0.3);
+    background-color: transparent;
     padding: 12px 0;
     height: 66px;
     position: fixed;
-    top: -70px;
     transition: all ease-out 180ms;
     transition-delay: 200ms;
+    z-index: 3;
     .container {
       flex-direction: row;
       justify-content: space-between;
@@ -281,6 +289,10 @@
   }
   ._countdown {
     background-image: url(../images/prenup_2_2.JPG);
+  }
+  .fp-viewing-home .navbar, 
+  .fp-viewing-home .navbar-mobile {
+    background-color: transparent;
   }
 }
 

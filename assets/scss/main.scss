@@ -208,17 +208,83 @@ p {
 .navbar,
 .navbar-mobile {
   position: absolute;
-  top: 0;
+  top: -63px;
   left: 0;
   z-index: 2;
   width: 100%;
-  background-color: rgba(158,72,49,0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px 0;
+  @include transition(all ease-in-out 280ms);
+  transition-delay: 300ms;
   .container {
     background-color: transparent;
+  }
+}
+.fp-viewing-home {
+  .navbar,
+  .navbar-mobile {
+    top: 0;
+    background-color: rgba(158,72,49,0.25);
+  }
+}
+.fp-viewing-introduction,
+.fp-viewing-wedding-day,
+.fp-viewing-venue,
+.fp-viewing-rsvp,
+.fp-viewing-what-to-wear,
+.fp-viewing-gift,
+.fp-viewing-faq,
+.fp-viewing-countdown {
+  .navbar,
+  .navbar-mobile {
+    top: 0;
+  }
+}
+.fp-viewing-wedding-day,
+.fp-viewing-gift {
+  nav ul li:last-child a {
+    background-color: #936e4c;
+    transition-delay: 300ms;
+  }
+}
+.fp-viewing-venue {
+  nav ul li:last-child a {
+    background-color: #4e5740;
+    transition-delay: 300ms;
+  }
+}
+.fp-viewing-rsvp {
+  nav ul li:last-child a {
+    background-color: #915636;
+    transition-delay: 300ms;
+  }
+}
+.fp-viewing-what-to-wear {
+  nav ul li:last-child a {
+    background-color: #978e86;
+    transition-delay: 300ms;
+  }
+}
+.fp-viewing-faq {
+  nav ul li a {
+    color: $color-swan-white;
+    transition-delay: 300ms;
+  }
+  nav ul li:last-child a {
+    background-color: #c8bcad;
+    transition-delay: 300ms;
+    color: $color-white;
+  }
+}
+.fp-viewing-countdown {
+  nav ul li a {
+    color: $color-swan-white;
+    transition-delay: 300ms;
+  }
+  nav ul li:last-child a {
+    color: $color-white;
   }
 }
 nav {
