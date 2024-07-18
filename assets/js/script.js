@@ -69,24 +69,33 @@ function daysUntilDecember3(dateString) {
   return daysDifference;
 }
 
-const currentDate = new Date(); // Get the current date
-const daysRemaining = daysUntilDecember3(currentDate);
+const targetDate = new Date(2023, 11, 3); // December 3, 2023
+function daysUntilTargetDate(currentDate, targetDate) {
+  const timeDiff = targetDate - currentDate;
+  const daysRemaining = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+  return daysRemaining;
+}
+
 let countdownDiv = document.getElementById("countdownDays");
 let daysUntil = document.getElementById('days-until');
 
-if(countdownDiv) {
+if (countdownDiv) {
   var x = setInterval(function() {
-    if(daysUntil) {
+    const currentDate = new Date(); // Update the current date
+    const daysRemaining = daysUntilTargetDate(currentDate, targetDate); // Update the days remaining
+
+    if (daysUntil) {
       daysUntil.style.display = "block";
     }
-    countdownDiv.innerHTML = daysRemaining;
-    if(daysRemaining <= 0) {
-      countdownDiv.innerHTML = "Happy Wedding!!!";
+    if (daysRemaining > 0) {
+      countdownDiv.innerHTML = daysRemaining;
+    } else {
+      countdownDiv.innerHTML = "We are married 🎉!!!";
       document.querySelector('.sayido').remove();
+      clearInterval(x); // Clear the interval after reaching December 3, 2023
     }
   }, 1000);
 }
-
 
 let allPages = document.getElementById("fullpage");
 if(allPages) {
